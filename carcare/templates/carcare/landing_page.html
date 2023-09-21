@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+          background-image: url('/static/carcare/background.png');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          font-family: Arial, sans-serif;
+        }
+        
+        .content {
+          text-align: center;
+          color: #ffffff;
+        }
+        
+        h1 {
+          font-size: 36px;
+          margin-bottom: 10px;
+        }
+        
+        p {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        a {
+            color: #f3f3f3;
+            text-decoration: none;
+        }
+        
+        .button {
+          font-size: 20px;
+          padding: 10px 20px;
+          margin-top: 10px;
+          background-color: #2f4c90;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        
+        .button:hover {
+          background-color: #455b8f;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Car Care!</h1>
+        <p>Your go-to place for car maintenance.</p>
+        <button class="button"><a href="{% url 'home' %}">Get Started</a></button>
+    </div>
+</body>
+</html>

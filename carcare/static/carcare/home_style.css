@@ -1,0 +1,194 @@
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    color: #000000;
+    line-height: 1.6;
+    background-image: url('/static/carcare/background_clear.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header {
+    padding: 20px;
+    margin-top: 0;
+}
+
+h5 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.landing-page-btn {
+    background-color: #2f4c90;
+}
+
+.landing-page-btn:hover {
+    background-color: #1c325f;
+}
+
+.empty-message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.banner {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.new-section h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.new-section p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.new-section img {
+    margin-left: 850px;
+}
+
+/* Description Styles */
+.description {
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.description-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description-text h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.description-text p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Notes Styles */
+.notes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0 auto; /* Center the notes horizontally */
+    max-width: 960px; /* Set a maximum width for the notes */
+    flex-wrap: wrap; /* Allow notes to wrap if they don't fit on the same line */
+    gap: 20px; /* Add space between the notes */
+    text-align: center;
+}
+
+.note {
+    flex: 1; /* Distribute available space evenly among notes */
+    max-width: calc(33.33% - 20px); /* Calculate maximum width for each note with space in between */
+    margin: 0; /* Remove the margin from individual notes */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #cce5ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.note:hover {
+    transform: scale(1.05); /* Add a slight hover effect */
+}
+
+.note h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.note p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.center-button button {
+    margin: 10px; /* Add spacing between the buttons */
+}
+
+.center-button a.btn {
+    display: block;
+    padding: 10px 20px; /* Increase padding to make the buttons bigger */
+    background-color: #2f4c90;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.center-button a.btn:hover {
+    background-color: #1c325f; /* Change background color on hover */
+}
+
+button{
+    margin-left: 900px;
+    margin-bottom: 25px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #d8d8d8;
+    padding: 5px;
+    width: 100%;
+    position: relative; /* Remove fixed positioning */
+}

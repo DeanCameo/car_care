@@ -1,0 +1,12 @@
+SUV
+Coupe
+Convertible
+Hatchback
+Minivan
+Sedan
+Crossover
+Sports
+Supercar
+Van
+Pickup truck
+Off-Road

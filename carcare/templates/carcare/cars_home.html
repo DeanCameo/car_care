@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/car_style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+        <main>
+            {% if user_cars %}
+                <section>
+                    <h2>Your Cars:</h2>
+                    <ul class="car-list"> 
+                        {% for car in user_cars %}
+                            <li><a class="car-link" href="{% url 'car_details' car.id %}">{{ car.brand }} ({{ car.year }}) {{ car.plate_number }}</a></li>
+                        {% endfor %}
+                        <br>
+                        <div class="center-button">
+                            <button><a href="{% url 'create_car' %}" class="btn">Add Car</a></button>
+                        </div>
+                    </ul>
+                </section>
+            {% else %}
+                <section>
+                    <p class="empty-message">You don't have any cars added yet.</p>
+                    <div class="center-button">
+                        <button><a href="{% url 'create_car' %}" class="btn">Add Car</a></button>
+                    </div>
+                </section>
+            {% endif %}
+            <hr>
+            <div class="center-button">
+                <button><a href="{% url 'home' %}" class="btn">home</a></button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

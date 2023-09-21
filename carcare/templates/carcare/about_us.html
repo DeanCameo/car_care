@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/about.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+
+        <main>
+            <section class="content">
+                <h1>About Us</h1>
+                <p>We are passionate about providing a comprehensive vehicle management solution that simplifies the way you manage and track your fleet of vehicles. Our team is dedicated to delivering the best user experience and helping you stay on top of your vehicle maintenance and management tasks.</p>
+                <p>At CarCare, we understand the challenges vehicle owners face in keeping their vehicles in optimal condition. Our platform is designed to streamline your vehicle management tasks, from scheduling services to tracking expenses, and everything in between.</p>
+                <p>With years of experience and a commitment to innovation, we continue to enhance our platform to meet the evolving needs of vehicle owners and fleet managers. Our goal is to provide you with a user-friendly solution that empowers you to make informed decisions about your vehicles.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

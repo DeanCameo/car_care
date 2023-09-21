@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+        <main>
+            <h1>Insurance History</h1>
+            <div class="history-box">
+                <ul class="service-list">
+                    {% for insurance in insurances %}
+                    <li>
+                        <p><strong>Insurance Start Date:</strong> {{ insurance.insurance_start_date }}</p>
+                        <p><strong>Insurance Expiration Date:</strong> {{ insurance.insurance_expiration_date }}</p>
+                        <p><strong>Insurance Company:</strong> {{ insurance.insurance_company }}</p>
+                        <p><strong>Insurance Price:</strong> {{ insurance.insurance_price }}</p>
+                    </li> 
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="center-button">
+                <button><a href="{% url 'create_insurance' car.id %}" class="btn">Add New Insurance</a></button>
+            </div>
+            <hr>
+            <div class="center-button">
+                <button><a href="{% url 'car_details' car.id %}" class="btn">Back</a></button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

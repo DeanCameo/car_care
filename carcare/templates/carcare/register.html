@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/style.css' %}">
+    <title>Register</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+        <main>
+            <h1>Register</h1>
+            <section class="card">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 D.Cameo. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

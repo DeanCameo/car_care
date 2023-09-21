@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/style.css' %}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+        <main>
+            <h1>Login</h1>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div class="history-box">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <br>
+            <h3>Dont Have Account Already ?</h3>
+            <button><a href="{% url 'register' %}" class="btn">Register</a></button>
+            <br>
+            <h3>Or</h3>
+            <button><a href="{% url 'home' %}" class="btn">Back to Home</a></button>
+</body>
+</html>

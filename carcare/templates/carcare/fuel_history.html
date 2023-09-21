@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+        <main>
+            <h1>Fuel History</h1>
+            <div class="history-box">
+                <ul class="service-list">
+                    {% for fule in fules %}
+                    <li>
+                        <h1>Fuel Information</h1>
+                        <p><strong>Fuel Type:</strong> {{ fuel.fuel_type }}</p>
+                        <p><strong>Fuel Amount:</strong> {{ fuel.fuel_amount }}</p>
+                        <p><strong>Fuel Station Name:</strong> {{ fuel.station_name }}</p>
+                        <p><strong>Km Per Tank:</strong> {{ fuel.km_per_tank }}</p>
+                        <p><strong>Price Per Gallon:</strong> {{ fuel.price_per_gallon }}</p>
+                        <p><strong>Overall Price:</strong> {{ fuel.fuel_overall_price }}</p>
+                        <p><strong>Fuel Fill Date:</strong> {{ fuel.fuel_date }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="center-button">
+                <button><a href="{% url 'create_fuel' car.id %}" class="btn">Add New Fule Fill</a></button>
+            </div>
+            <hr>
+            <div class="center-button">
+                <button><a href="{% url 'car_details' car.id %}" class="btn">Back</a></button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

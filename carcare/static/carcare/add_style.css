@@ -1,0 +1,127 @@
+/* Add Car Page CSS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Make HTML and body occupy the full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: #333;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  background-image: url('/static/carcare/background_clear.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  min-height: 100%; /* Ensure body covers the full viewport height */
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 60px;
+  margin-top: 5px;
+}
+
+form {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #000; /* Set text color to black */
+}
+
+form label {
+  font-weight: bold;
+  color: #000; /* Set label text color to black */
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #000; /* Set text color to black */
+}
+
+form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2f4c90;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #1c325f;
+}
+
+a {
+  color: #2f4c90;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.center-button a.btn {
+    display: block;
+    padding: 10px 20px; /* Increase padding to make the buttons bigger */
+    background-color: #2f4c90;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    font-size: 18px;
+}
+
+.center-button a.btn:hover {
+    background-color: #1c325f; /* Change background color on hover */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}

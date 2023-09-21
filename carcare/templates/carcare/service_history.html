@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+        <main>
+            <h1>Service History</h1>
+            <div class="history-box">
+                <ul class="service-list">
+                    {% for service in services %}
+                        <li>
+                            <p><strong>Service Date:</strong> {{ service.serv_date }}</p>
+                            <p><strong>Service KM:</strong> {{ service.serv_km }}</p>
+                            <p><strong>Service Type:</strong> {{ service.serv_type }}</p>
+                            <p><strong>Service Price:</strong> {{ service.serv_price }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="center-button">
+                <button><a href="{% url 'create_service' car.id %}" class="btn">Add New Service</a></button>
+            </div>
+            <hr>
+            <div class="center-button">
+                <button><a href="{% url 'car_details' car.id %}" class="btn">Back</a></button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

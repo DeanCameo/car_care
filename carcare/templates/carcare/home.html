@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/home_style.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+
+        <main>
+            <section class="banner">
+                <img class="banner-image" src="{% static 'carcare/home_banner.png' %}" alt="Banner Image">
+            </section>
+
+            <section class="description">
+                <div class="description-text">
+                    <h1>Welcome to CarCare<br>Your Comprehensive Vehicle Management System</h1>
+                    <p>CarCare is your all-in-one solution for efficiently managing and tracking the maintenance, services, payments, breakdowns, and tests of your fleet of vehicles. 
+                        Whether you're a single car owner or managing a whole fleet, CarCare offers a user-friendly platform to streamline your vehicle management tasks, ensuring a seamless and worry-free driving experience.</p>
+                </div>
+            </section>
+
+            <section class="notes">
+                <div class="note">
+                    <h3>Effortless Vehicle Management</h3>
+                    <p>With CarCare, you can effortlessly schedule appointments for maintenance, repairs, and various services. Our intuitive interface allows you to keep track of each vehicle's service history, ensuring your vehicles are always up-to-date and in optimal condition.</p>
+                </div>
+                <div class="note">
+                    <h3>Comprehensive Service Tracking</h3>
+                    <p>CarCare offers detailed service tracking, allowing you to log repairs, fuel consumption, insurance details, and even wheel changes. Stay informed about every aspect of your vehicles' performance and expenses, helping you make informed decisions and manage costs effectively.</p>
+                </div>
+                <div class="note">
+                    <h3>Enhanced User Experience</h3>
+                    <p>CarCare prioritizes customer satisfaction, offering a range of convenient features to streamline your vehicle management tasks. a centralized dashboard for easy access, our user-friendly platform ensures a seamless and worry-free driving experience.</p>
+                </div>
+            </section>
+            <hr>
+            <!-- New Section -->
+            {% if user.is_authenticated %}
+                <section class="new-section">
+                    <a href="http://127.0.0.1:8000/carcare/cars/"><img src="/static/carcare/cars.png"></a>
+                    {% else %}
+                        <p class="empty-message">Start Now</p>
+                        <div class="center-button">
+                            <button><a href="{% url 'login' %}" class="btn">Login</a></button>
+                            <button><a href="{% url 'register' %}" class="btn">Register</a></button>
+                        </div>
+                    {% endif %}
+                </section>
+                <hr>
+                <div class="center-button">
+                    <button><a href="{% url 'landing_page' %}" class="btn">Landing Page</a></button>
+                </div>
+        </main>
+    </div>
+</body>
+</html>

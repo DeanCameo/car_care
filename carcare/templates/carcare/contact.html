@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/about.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            {% include 'carcare/navbar.html' %}
+        </header>
+
+        <main>
+            <section class="content">
+                <h1>Contact Us</h1>
+                <p>If you have any questions, feedback, or inquiries, feel free to reach out to us using the contact information below:</p>
+                <ul>
+                    <li>Email: info@carcare.com</li>
+                    <li>Phone: +1234567890</li>
+                    <li>Address: 123 CarCare St, Vehicle City, VC 12345</li>
+                </ul>
+                <p>You can also fill out the contact form below to get in touch with us. We'll respond to your message as soon as possible.</p>
+                <form class="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

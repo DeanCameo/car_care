@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'carcare/detail_style.css' %}">
+    <title>Car Detail</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Car Details</h1>
+            <hr>
+        </header>
+        <main>
+            <div class="info-container">
+                <section class="car-info">
+                    <h2>Car Information</h2>
+                    <p><strong>Plate Number:</strong> {{ car.plate_number }}</p>
+                    <p><strong>Brand:</strong> {{ car.brand }}</p>
+                    <p><strong>Car Type:</strong> {{ car.car_type }}</p>
+                    <p><strong>Color:</strong> {{ car.color }}</p>
+                    <p><strong>Year:</strong> {{ car.year }}</p>
+                    <p><strong>KM:</strong> {{ car.km }}</p>
+                    <p><strong>Test Date:</strong> {{ car.test_date }}</p>
+                </section>
+            </div>
+            <hr>
+            <ul class="cards">
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__image card__image--service"></div>
+                    <div class="card__content">
+                      <div class="card__title">Services</div>
+                      <p class="card__text">Here you can track your last services and add new when service has done. </p>
+                      <button class="btn btn--block card__btn"><a href="{% url 'service_history' car.id %}">Services</a></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__image card__image--repair"></div>
+                    <div class="card__content">
+                      <div class="card__title">Repairs</div>
+                      <p class="card__text">Here you can track your last repairs or braekedowns and add new when repair has done. </p>
+                      <button class="btn btn--block card__btn"><a href="{% url 'repair_history' car.id %}">Repairs</a></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__image card__image--wheel"></div>
+                    <div class="card__content">
+                      <div class="card__title">Wheels</div>
+                      <p class="card__text">Here you can track your last wheels change or braekedowns and add new when change has done. </p>
+                      <button class="btn btn--block card__btn"><a href="{% url 'wheel_change_history' car.id %}">Wheels</a></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item">
+                  <div class="card">
+                    <div class="card__image card__image--insurance"></div>
+                    <div class="card__content">
+                      <div class="card__title">Insurances</div>
+                      <p class="card__text">Here you can track your last insurance payment or deals and add new when has done. </p>
+                      <button class="btn btn--block card__btn"><a href="{% url 'insurance_history' car.id %}">Insurances</a></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="cards__item">
+                    <div class="card">
+                      <div class="card__image card__image--fuel"></div>
+                      <div class="card__content">
+                        <div class="card__title">Fuel</div>
+                        <p class="card__text">Here you can track your last Fuel tank fill payment and add new when tank has filled. </p>
+                        <button class="btn btn--block card__btn"><a href="{% url 'fuel_history' car.id %}">Fuel</a></button>
+                      </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="center-button">
+                <button><a href="{% url 'home' %}" class="btn">Back to Home</a></button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2023 D.Cameo. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

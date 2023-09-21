@@ -1,0 +1,131 @@
+/* Common Styles */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    color: #000000;
+    line-height: 1.6;
+    background-image: url('/static/carcare/background_clear.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 20px;
+    margin-top: 0;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2f4c90;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1c325f;
+}
+
+
+.center-button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.center-button a.btn {
+    display: block;
+    padding: 10px 20px; /* Increase padding to make the buttons bigger */
+    background-color: #2f4c90;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    font-size: 18px;
+}
+
+.center-button a.btn:hover {
+    background-color: #1c325f; /* Change background color on hover */
+}
+
+
+/* Car List Styles */
+.car-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.car-list li {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.car-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #cce5ff;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+}
+
+.car-link:hover {
+    transform: scale(1.05);
+}
+
+.empty-message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.add-car-btn {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Navigation Button Styles */
+.nav-btn {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+

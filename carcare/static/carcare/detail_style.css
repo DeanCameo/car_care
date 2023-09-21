@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after { 
+box-sizing: border-box;
+}
+
+html {
+background-color: #f0f0f0;
+}
+
+body {
+color: #999999;
+font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+font-style: normal;
+font-weight: 400;
+letter-spacing: 0;
+background-image: url('/static/carcare/background_clear.png');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+margin: 0;
+display: flex;
+flex-direction: column;
+}
+
+img {
+height: auto;
+max-width: 100%;
+vertical-align: middle;
+}
+
+.btn {
+background-color: white;
+border: 1px solid #cccccc;
+border-radius: 1rem;
+color: #696969;
+padding: 0.5rem;
+text-transform: lowercase;
+}
+
+.btn--block {
+display: block;
+width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between; /* Spread the cards evenly */
+}
+
+.cards__item {
+    flex-basis: calc(20% - 1rem); /* Make each card take up half of the available width with some spacing in between */
+    margin-bottom: 2rem; /* Add some vertical spacing between rows */
+}
+
+.card {
+background-color: white;
+border-radius: 0.25rem;
+box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+display: flex;
+flex-direction: column;
+overflow: hidden;
+&:hover {
+    .card__image {
+    filter: contrast(100%);
+    }
+}
+}
+
+.card__content {
+display: flex;
+flex: 1 1 auto;
+flex-direction: column;
+padding: 1rem;
+}
+
+.card__image {
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+border-top-left-radius: 0.25rem;
+border-top-right-radius: 0.25rem;
+filter: contrast(70%);
+filter: saturate(180%);
+overflow: hidden;
+position: relative;
+transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+&::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+@media(min-width: 40rem) {
+    &::before {
+    padding-top: 66.6%;
+    }
+}
+}
+
+.card__image--insurance {
+background-image: url('/static/carcare/logo_4insu.png');
+}
+
+.card__image--repair {
+background-image: url('/static/carcare/logo_2repa.png');
+}
+
+.card__image--wheel {
+background-image: url('/static/carcare/logo_3whe.png');
+}
+
+.card__image--service {
+background-image: url('/static/carcare/logo_1serv.png');
+}
+
+.card__image--fuel {
+background-image: url('/static/carcare/logo_5fuel.png');
+}
+
+.card__title {
+color: #696969;
+font-size: 1.25rem;
+font-weight: 300;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.card__text {
+flex: 1 1 auto;
+font-size: 0.875rem;
+line-height: 1.5;
+margin-bottom: 1.25rem;
+}
+
+.history-buttons {
+    display: flex;
+    justify-content: space-around; /* Spread out the cards */
+    flex-wrap: wrap; /* Allow multiple rows of cards */
+    margin-top: 20px;
+}
+
+.history-button {
+    width: 200px;
+    padding: 25px;
+    background-color: #8f8c8c;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.history-button:hover {
+    background-color: #e1e1e1;
+}
+
+.info-container {
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.car-info {
+    flex-basis: 40%; 
+    padding-left: 10px;
+
+}
+
+.car-info h2 {
+    margin: 0; /* Add this line to remove the default margin */
+}
+
+.car-info p {
+    color: #d3d3d3;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.center-button a.btn {
+    display: block;
+    padding: 10px 20px; /* Increase padding to make the buttons bigger */
+    background-color: #2f4c90;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    font-size: 18px;
+}
+
+.center-button a.btn:hover {
+    background-color: #1c325f; /* Change background color on hover */
+}
+
+h1, h2 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin-top: 30px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
